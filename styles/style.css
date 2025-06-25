@@ -134,7 +134,7 @@ header {
 }
 
 .filter_picture-blur {
-  filter: blur(0.1rem);
+  filter: blur(0.1rem) saturate(160%);
 }
 
 .filter_picture-hue-rotate {

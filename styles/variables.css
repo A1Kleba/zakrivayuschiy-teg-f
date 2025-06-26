@@ -19,6 +19,7 @@
     --accent-font: "PressStart2P";
     --header-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
     --main-size: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+    --title-font-weight: 700;
     --inline-size-main: 49%;
     --font-weight: 400;
     --text-size: 18px;

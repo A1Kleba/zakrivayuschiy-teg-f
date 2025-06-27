@@ -31,8 +31,8 @@ header {
 .header__container {
   inline-size: var(--header-size);
   background-color: white;
-  padding-block-start: clamp(8rem, 8rem + 0vw, 8rem);
-  padding-block-end: clamp(8rem, 8rem + 0vw, 8rem);
+  padding-block-start: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   border: 2px solid var(--accent-color);
   display: flex;
   flex-direction: column;
@@ -138,9 +138,14 @@ header {
     1px 0 var(--text-stroke-color), 0 -1px var(--text-stroke-color);
 }
 
-@supports (text-stroke: 1px var(--text-stroke_color)) {
+@supports (
+  (text-stroke: 1px var(--text-stroke_color)) or
+    (-webkit-text-stroke: 1px var(--text-stroke-color))
+) {
   .label_picture {
+    text-shadow: none;
     text-stroke: 1px var(--text-stroke_color);
+    -webkit-text-stroke: 1px var(--text-stroke-color);
   }
 }
 
@@ -174,7 +179,6 @@ header {
 .card__like-button {
   min-block-size: 38px;
   min-inline-size: 130px;
-  transition: box-shadow 0.3s ease;
 }
 
 .button {
@@ -184,6 +188,7 @@ header {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
@@ -233,12 +238,12 @@ header {
 .button-dialog {
   border: 2px solid var(--accent-color);
   background-color: transparent;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   position: relative;
 }
 
 .open-button {
-  padding: 19px 21px 19px 19px;
+  padding: 15px 17px;
   background-color: white;
 }
 
@@ -276,6 +281,8 @@ header {
 .floppy-dialog {
   display: grid;
   grid-template-columns: 50px 225px;
+  align-items: center;
+  justify-items: center;
   gap: 20px;
 }
 
